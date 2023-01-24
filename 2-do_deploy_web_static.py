@@ -1,19 +1,15 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Aug 13 14:21:54 2020
-@author: Robinson Montes
-"""
+
 from fabric.api import local, put, run, env
 from datetime import datetime
 
 env.user = 'ubuntu'
-env.hosts = ['35.227.35.75', '100.24.37.33']
+env.hosts = ['54.90.12.170', '100.26.238.177']
 
 
 def do_pack():
     """
-    Targginng project directory into a packages as .tgz
+     generates a .tgz archive from the contents of the web_static folder
     """
     now = datetime.now().strftime("%Y%m%d%H%M%S")
     local('sudo mkdir -p ./versions')
